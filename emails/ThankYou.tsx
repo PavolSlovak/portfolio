@@ -33,7 +33,7 @@ export const ThankYou = ({ name }: WelcomeEmailProps) => (
           me on LinkedIn.
         </Text>
         <Section style={btnContainer}>
-          <Button style={button} href={process.env.NEXT_PUBLIC_VERCEL_URL}>
+          <Button style={button} href={process.env.VERCEL_URL}>
             View My Work
           </Button>
         </Section>
