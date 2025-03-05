@@ -34,7 +34,7 @@ function ContactForm() {
     <div className="flex  flex-col bg-container_lighter dark:bg-container_dark_lighter">
       <div className="flex flex-col w-full items-center rounded-b-[100px] bg-container   dark:bg-container_dark py-10 space-y-10">
         <ChatBubbleLeftEllipsisIcon className="w-20 h-20 dark:text-container text-black" />
-        <h1>Let's build something amazing together!</h1>
+        <h1>Let&apos;s s build something amazing together!</h1>
       </div>
 
       <form
