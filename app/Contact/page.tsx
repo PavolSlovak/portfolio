@@ -6,11 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { ContactFormSchema, TContactForm } from "@/types";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import {
-  ChatBubbleBottomCenterIcon,
-  ChatBubbleLeftEllipsisIcon,
-  HandRaisedIcon,
-} from "@heroicons/react/16/solid";
+import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/16/solid";
 
 function ContactForm() {
   const {

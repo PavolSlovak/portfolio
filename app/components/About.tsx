@@ -6,13 +6,15 @@ function About() {
           About me
         </span>
         <article className=" md:w-2/3 text-center py-16 border-t-[1px] border-container_lighter dark:border-container ">
-          Hi, I'm Pavol Slovak, a full-stack developer based in Sydney. I have
-          experience in building digital products, websites and experiences. I
-          have a passion for creating and designing products that are both
-          functional and aesthetically pleasing. I am proficient in a variety of
-          programming languages and frameworks, including React, Node.js, and
-          MongoDB. I am always looking for new opportunities to learn and grow
-          as a developer.
+          <p>
+            Hi, I'm Pavol Slovak, a full-stack developer based in Sydney. I have
+            experience in building digital products, websites and experiences. I
+            have a passion for creating and designing products that are both
+            functional and aesthetically pleasing. I am proficient in a variety
+            of programming languages and frameworks, including React, Node.js,
+            and MongoDB. I am always looking for new opportunities to learn and
+            grow as a developer.
+          </p>
         </article>
         <div />
       </div>
