@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { Providers } from "@/store/themeContext";
+import Footer from "./components/Footer";
+import { Raleway } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${raleway.variable}  antialiased`}>
+        <main className="flex justify-center min-h-screen font-sans ">
+          <div className="flex flex-col w-full max-w-[1280px] bg-container xl:border-4 xl:border-white xl:rounded-[100px] dark:text-container dark:xl:border-container_dark_lighter dark:bg-container_dark dark:border-container_dark">
+            {/* Dark Mode Provider */}
+            <Providers>
+              <Navbar />
+              {children}
+              <Footer />
+            </Providers>
+          </div>
+        </main>
       </body>
     </html>
   );

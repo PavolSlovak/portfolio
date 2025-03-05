@@ -1,21 +1,38 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+html {
+  scroll-behavior: smooth;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.btn {
+  @apply box-border border-[1px] ml-4 py-3 w-20 flex justify-center bg-white dark:bg-container_dark_lighter    hover:border-black dark:border-container_dark_lighter dark:hover:border-container font-bold rounded-3xl;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.largeBtn {
+  @apply font-bold px-8 py-5 rounded-full  hover:bg-opacity-70 hover:shadow-lg hover:transform hover:-translate-y-1 transition-transform duration-300 ease-in-out tracking-wide cursor-pointer;
+}
+.formField {
+  @apply w-full px-4 py-2 focus:outline-none  focus:ring-black bg-container dark:bg-container_dark dark:placeholder:text-container dark:text-container rounded-md  text-black placeholder:text-black;
+}
+@layer components {
+  body {
+    @apply font-sans;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  h1 {
+    @apply font-semibold text-4xl  max-w-md text-center leading-snug tracking-wider;
+  }
+  h2 {
+    @apply font-semibold text-2xl py-2 max-w-xl text-center leading-snug tracking-wider;
+  }
 }
