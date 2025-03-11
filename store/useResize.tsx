@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 const useResize = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth < 768 ? true : false
+  );
 
   useEffect(() => {
     const handleResize = () => {
