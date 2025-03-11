@@ -1,5 +1,4 @@
 "use client";
-import useResize from "@/store/useResize";
 import {
   CodeBracketIcon,
   ComputerDesktopIcon,
