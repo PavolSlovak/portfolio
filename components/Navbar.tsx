@@ -5,7 +5,6 @@ import useResize from "@/store/useResize";
 import ThemeButton from "@/components/ThemeButton";
 import { EnvelopeIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
-
 function Navbar() {
   const [isCopying, setIsCopying] = useState(false);
   const { isMobile } = useResize();
