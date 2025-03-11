@@ -21,7 +21,7 @@ function Form() {
     formState: { errors },
   } = useForm({ resolver: zodResolver(ContactFormSchema) });
 
-  const { mutate, isPending, isError, error } = useMutation({
+  const { mutate, isPending, isError, error, reset } = useMutation({
     mutationFn: async (data: TContactForm) => {
       const response = await fetch("/api/emails", {
         method: "POST",
@@ -42,7 +42,9 @@ function Form() {
   async function sendForm(data: TContactForm) {
     try {
       console.log("Form submitted", data);
-      await mutate(data);
+      await mutate(data, {
+        onSuccess: () => reset(),
+      });
     } catch (err) {
       console.error("Error submitting form", err);
     }

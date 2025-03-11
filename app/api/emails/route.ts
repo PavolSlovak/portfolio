@@ -16,7 +16,6 @@ export async function POST(req: NextRequest) {
     // Parse the JSON body from the request
     const { name, email, company, message } = await req.json();
     console.log(name, email, company, message);
-    throw new Error("Error Occured mdfka! ");
     // Validate that required fields exist
     if (!email) {
       // This error will also fix the "No recipients defined" error if email is missing
@@ -109,7 +108,7 @@ function jobOfferEmailTemplate({ name, company, message, email }: TOfferEmail) {
     </div>
   `;
 }
-function thankYouTemplate({ name, company, message }: TOfferEmail) {
+function thankYouTemplate({ name, message }: TOfferEmail) {
   return `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
       <h2 style="color: #2E86C1; text-align: center;">Thank you for reaching out!</h2>

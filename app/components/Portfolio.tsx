@@ -43,7 +43,7 @@ function Portfolio() {
   return (
     <section id="portfolio" className="bg-container dark:bg-container_dark">
       {/* Inner container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mx-4 md:mx-8 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mx-4 md:mx-8 mb-12">
         {portfolioItems.map((_, index) => (
           <Card
             key={index}

@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 
 function Services() {
   const [isHovered, setIsHovered] = useState(false);
-  const { isMobile } = useResize();
 
   const techStack = [
     { icon: <PencilSquareIcon className="w-10 h-10" />, text: "UI/UX" },
