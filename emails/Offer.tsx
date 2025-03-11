@@ -11,37 +11,27 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-interface WelcomeEmailProps {
+interface OfferProps {
   name: string;
+  email: string;
+  company: string;
+  message: string;
 }
 
-export const ThankYou = ({ name }: WelcomeEmailProps) => (
+const Offer = ({ name, email, company, message }: OfferProps) => (
   <Html>
     <Head />
     <Body style={main}>
-      <Preview>
-        Thanks for your interest! I'll be in touch shortly—check out my work in
-        the meantime.{" "}
-      </Preview>
+      <Preview>You revieved offer from {company}</Preview>
       <Container style={container}>
-        <Text style={paragraph}>Hi {name},</Text>
+        <Text style={paragraph}>Message:</Text>
+        <Text style={paragraph}>{message}</Text>
+        <Text style={paragraph}>Company: {company}</Text>
+
         <Text style={paragraph}>
-          Thank you for reaching out! I appreciate your message and will get
-          back to you as soon as possible.
-        </Text>
-        <Text style={paragraph}>
-          In the meantime, feel free to check out my latest work or connect with
-          me on LinkedIn.
-        </Text>
-        <Section style={btnContainer}>
-          <Button style={button} href={process.env.VERCEL_URL}>
-            View My Work
-          </Button>
-        </Section>
-        <Text style={paragraph}>
-          Best regards,
+          Email: {email}
           <br />
-          Pavol Slovak
+          Recieved from: {name}
         </Text>
         <Hr style={hr} />
         <Text style={footer}>Thanks again for getting in touch!</Text>
@@ -50,7 +40,7 @@ export const ThankYou = ({ name }: WelcomeEmailProps) => (
   </Html>
 );
 
-export default ThankYou;
+export default Offer;
 
 const main = {
   backgroundColor: "#ffffff",
@@ -61,11 +51,6 @@ const main = {
 const container = {
   margin: "0 auto",
   padding: "20px 0 48px",
-};
-
-const logo = {
-  margin: "0 auto",
-  borderRadius: "50%",
 };
 
 const paragraph = {

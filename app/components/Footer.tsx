@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className=" bg-container_lighter dark:bg-container_dark_lighter xl:rounded-b-[100px] ">
+    <footer className=" bg-container_lighter dark:bg-container_dark_lighter  ">
       <div className="flex justify-between mx-10 border-t-2 dark:border-t-container py-8">
         <p> &#174; Pavol Slovak</p>
         <div className="flex">

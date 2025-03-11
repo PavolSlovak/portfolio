@@ -1,11 +1,11 @@
 function About() {
   return (
     <section id="about">
-      <div className="relative flex flex-col items-center mt-20 bg-container dark:bg-container_dark">
+      <div className="relative flex flex-col items-center mt-20 bg-container dark:bg-container_dark mx-4 md:mx-8 ">
         <span className="absolute left-1/2 -translate-x-1/2 -top-5 -rotate-[0.2rad] bg-container_lighter dark:bg-container text-black p-2 w-36 text-center rounded-full shadow-lg">
           About me
         </span>
-        <article className=" md:w-2/3 text-center py-16 border-t-[1px] border-container_lighter dark:border-container ">
+        <article className=" md:w-2/3 text-center text-lg py-16 border-t-2 border-container_lighter">
           <p>
             Hi, I&apos;m Pavol Slovak, a full-stack developer based in Sydney. I
             have experience in building digital products, websites and

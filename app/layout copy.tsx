@@ -24,8 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${raleway.variable}  antialiased`}>
-        <main className="flex justify-center min-h-screen font-sans ">
-          <div className="flex flex-col w-full max-w-[2000] bg-container xl:border-4 xl:border-white  dark:text-container dark:xl:border-container_dark_lighter dark:bg-container_dark dark:border-container_dark">
+        <main className="flex justify-center min-h-screen font-sans bg-container dark:bg-container_dark">
+          <div className="flex flex-col bg-container  max-w-[2000px] dark:text-container dark:bg-container_dark">
             {/* Dark Mode Provider */}
             <Providers>
               <Navbar />

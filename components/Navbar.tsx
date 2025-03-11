@@ -9,6 +9,13 @@ import Link from "next/link";
 function Navbar() {
   const [isCopying, setIsCopying] = useState(false);
   const { isMobile } = useResize();
+
+  const socials = {
+    linkedIn: "https://www.linkedin.com/in/pavol-slov%C3%A1k-2455331b5/",
+    git: "https://github.com/PavolSlovak",
+    instagram: "https://www.instagram.com/pavol.slovak1995/",
+  };
+
   function copyAddressFn() {
     const mail = document.getElementById("mymail") as HTMLSpanElement | null;
     if (mail) {
@@ -30,18 +37,18 @@ function Navbar() {
   if (isMobile) {
     navbar = (
       <>
-        <div className="flex items-center flex-wrap">
+        <div className="flex">
           <span id="mymail" className="absolute hidden">
             pavol.slovak1995@gmail.com
           </span>
-          <button className="btn" onClick={copyAddressFn}>
-            {isCopying ? "Copied" : <EnvelopeIcon className="w-5 h-5" />}
+          <button className="btn " onClick={copyAddressFn}>
+            {isCopying ? "Copied!" : <EnvelopeIcon className="w-5 h-5" />}
           </button>
           <Link
             href="/CV_SLOVAK_PAVOL.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn"
+            className="btn ml-4 "
           >
             CV
           </Link>
@@ -52,12 +59,9 @@ function Navbar() {
   } else {
     navbar = (
       <>
-        <div className="flex items-center flex-wrap">
+        <div className="flex items-center flex-wrap space-x-4 ">
           <span id="mymail">pavol.slovak1995@gmail.com</span>
-          <button
-            className="relative btn flex items-center"
-            onClick={copyAddressFn}
-          >
+          <button className="btn" onClick={copyAddressFn}>
             {isCopying ? "Copied" : "Copy"}
           </button>
           <Link
@@ -74,7 +78,7 @@ function Navbar() {
           {!isMobile && (
             <div className="flex">
               <Link
-                href="https://www.linkedin.com/in/pavol-slov%C3%A1k-2455331b5/"
+                href={socials.linkedIn}
                 className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,7 +87,7 @@ function Navbar() {
               </Link>
               <span className="mx-1">/</span>
               <Link
-                href="https://github.com/PavolSlovak"
+                href={socials.git}
                 className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -92,7 +96,7 @@ function Navbar() {
               </Link>
               <span className="mx-1">/</span>
               <Link
-                href="https://www.instagram.com/pavol.slovak1995/"
+                href={socials.instagram}
                 className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -109,7 +113,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="flex  py-10 justify-between wrap-none dark:border-container_dark_lighter dark:border-b-2 mx-10  bg-container dark:bg-container_dark xl:rounded-t-[100px]">
+    <nav className="flex py-10 justify-between wrap-none dark:border-container_dark_lighter dark:border-b-2 mx-4 md:mx-8  bg-container dark:bg-container_dark">
       {navbar}
     </nav>
   );
