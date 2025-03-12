@@ -41,9 +41,9 @@ function Navbar() {
         <span id="mymail" className="hidden md:flex">
           pavol.slovak1995@gmail.com
         </span>
-        <button className="btn" onClick={copyAddressFn}>
-          <EnvelopeIcon className="w-3 h-3 mr-1 " />
-          {isCopying ? "Copied!" : "Copy"}
+
+        <button className="btn hidden" onClick={copyAddressFn}>
+          {isCopying ? "Copied!" : "Email"}
         </button>
         <Link
           href="/CV_SLOVAK_PAVOL.pdf"
