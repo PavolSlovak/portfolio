@@ -41,18 +41,23 @@ function Portfolio() {
   ];
 
   return (
-    <section id="portfolio" className="bg-container dark:bg-container_dark">
-      {/* Inner container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mx-4 md:mx-8 mb-12">
-        {portfolioItems.map((_, index) => (
-          <Card
-            key={index}
-            href={portfolioItems[index].href}
-            title={portfolioItems[index].title}
-            description={portfolioItems[index].description}
-            image={portfolioItems[index].image}
-          />
-        ))}
+    <section
+      id="portfolio"
+      className=" bg-container dark:bg-container_dark flex justify-center"
+    >
+      <div className="flex w-full max-w-screen-2xl">
+        {/* Portfolio projects grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mx-4 md:mx-8 mb-12 w-full">
+          {portfolioItems.map((_, index) => (
+            <Card
+              key={index}
+              href={portfolioItems[index].href}
+              title={portfolioItems[index].title}
+              description={portfolioItems[index].description}
+              image={portfolioItems[index].image}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
