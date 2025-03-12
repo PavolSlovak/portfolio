@@ -34,9 +34,7 @@ function Navbar() {
     }
   }, [isCopying]);
 
-  let navbar;
-
-  navbar = (
+  let navbar = (
     <>
       <div className="flex items-center flex-wrap space-x-4 ">
         <span id="mymail" className="hidden md:flex">
