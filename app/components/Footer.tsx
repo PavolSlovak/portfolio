@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 function Footer() {
   const [isMounted, setIsMounted] = useState<boolean | null>(false);
-  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setIsMounted(true);
