@@ -9,7 +9,7 @@ function Footer() {
 
   useEffect(() => {
     setIsMounted(true);
-  });
+  }, []);
   return (
     <footer className=" bg-container_lighter dark:bg-container_dark_lighter  ">
       <div className="flex justify-between items-center mx-10 border-t-2 dark:border-t-container py-8">
