@@ -1,3 +1,4 @@
+import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import { z } from "zod";
 
 export const ContactFormSchema = z.object({

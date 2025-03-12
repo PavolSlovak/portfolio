@@ -45,7 +45,7 @@ function Services() {
         >
           {items.map(({ icon, text }, index) => (
             <motion.li
-              key={`${text}-${index}`}
+              key={`${index}`}
               style={{ width: `${100 / items.length}%` }} // Ensures even spacing
               className="flex flex-col items-center justify-center py-16 md:py-8 shrink-0 "
             >

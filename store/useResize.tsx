@@ -1,20 +1,21 @@
-"use client"; // Ensure this is a client component
+"use client";
 
 import { useEffect, useState } from "react";
 
 const useResize = () => {
-  const [isMobile, setIsMobile] = useState(false); // Default to false to avoid SSR issues
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // Ensure code only runs on the client
-
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
-    handleResize(); // Run once on mount
+    handleResize(); // Initialize state with the current window width
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
   return { isMobile };
