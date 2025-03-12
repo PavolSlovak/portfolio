@@ -39,8 +39,8 @@ function Footer() {
                 {isMounted && (
                   <Image
                     src={social.iconWhite}
-                    width={24}
-                    height={24}
+                    width={16}
+                    height={16}
                     alt={social.text}
                   />
                 )}
