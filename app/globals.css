@@ -17,7 +17,7 @@ html {
 @tailwind utilities;
 
 .btn {
-  @apply border-2 border-transparent py-3 w-20 flex justify-center items-center bg-white dark:bg-container_dark_lighter    hover:border-black dark:border-container_dark_lighter dark:hover:border-container font-bold rounded-3xl;
+  @apply border-2 text-sm md:text-base border-transparent py-3 w-16 md:w-20 flex justify-center items-center bg-white dark:bg-container_dark_lighter    hover:border-black dark:border-container_dark_lighter dark:hover:border-container font-bold rounded-3xl;
 }
 .btn-socials {
   @apply hover:underline p-2  rounded-full   md:hidden ml-2 border-2 border-transparent;

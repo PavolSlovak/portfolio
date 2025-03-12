@@ -36,7 +36,7 @@ function Navbar() {
 
   const navbar = (
     <>
-      <div className="flex items-center flex-wrap space-x-4 ">
+      <div className="flex items-center flex-wrap space-x-3 ">
         <span id="mymail" className="hidden md:flex">
           pavol.slovak1995@gmail.com
         </span>
