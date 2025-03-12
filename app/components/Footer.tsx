@@ -1,6 +1,5 @@
 "use client";
 import { socialsStack } from "@/components/constants";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
