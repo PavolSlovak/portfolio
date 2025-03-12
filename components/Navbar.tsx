@@ -15,7 +15,7 @@ function Navbar() {
 
   useEffect(() => {
     setIsMounted(true);
-  });
+  }, []);
 
   function copyAddressFn() {
     const mail = document.getElementById("mymail") as HTMLSpanElement | null;
