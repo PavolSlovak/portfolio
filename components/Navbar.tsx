@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { socialsStack } from "./constants";
-import { EnvelopeIcon } from "@heroicons/react/16/solid";
 
 function Navbar() {
   const [isCopying, setIsCopying] = useState(false);
