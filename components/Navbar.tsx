@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { socialsStack } from "./constants";
+import { EnvelopeIcon } from "@heroicons/react/16/solid";
 
 function Navbar() {
   const [isCopying, setIsCopying] = useState(false);
@@ -41,7 +42,8 @@ function Navbar() {
           pavol.slovak1995@gmail.com
         </span>
         <button className="btn" onClick={copyAddressFn}>
-          {isCopying ? "Copied" : "Copy"}
+          <EnvelopeIcon className="w-3 h-3 mr-1 " />
+          {isCopying ? "Copied!" : "Copy"}
         </button>
         <Link
           href="/CV_SLOVAK_PAVOL.pdf"
