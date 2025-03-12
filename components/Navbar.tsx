@@ -88,6 +88,7 @@ function Navbar() {
                     width={16}
                     height={16}
                     alt={social.text}
+                    priority
                   />
                 )}
               </Link>
