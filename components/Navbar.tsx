@@ -34,7 +34,7 @@ function Navbar() {
     }
   }, [isCopying]);
 
-  let navbar = (
+  const navbar = (
     <>
       <div className="flex items-center flex-wrap space-x-4 ">
         <span id="mymail" className="hidden md:flex">
@@ -72,19 +72,20 @@ function Navbar() {
               {/* Mobile links */}
               <Link
                 href={social.src}
-                className="flex hover:underline  md:hidden ml-2"
+                className=" btn-socials bg-white dark:bg-container_dark_lighter hover:border-black dark:hover:border-container "
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {isMounted && (
                   <Image
+                    className=" "
                     src={
                       resolvedTheme === "light"
                         ? social.iconBlack
                         : social.iconWhite
                     }
-                    width={30}
-                    height={30}
+                    width={24}
+                    height={24}
                     alt={social.text}
                   />
                 )}

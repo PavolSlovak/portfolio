@@ -11,13 +11,13 @@ const ThemeButton = () => {
   return (
     <button
       id="theme-toggle"
-      className="text-dark_gray dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 "
+      className="text-dark_gray dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-full text-sm p-2 "
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {/* Dark SVG Icon */}
-      {resolvedTheme === "dark" && <MoonIcon className="w-4 h-4" />}
+      {resolvedTheme === "dark" && <MoonIcon className="w-6 h-6" />}
       {/* Light SVG Icon */}
-      {resolvedTheme === "light" && <SunIcon className="w-4 h-4" />}
+      {resolvedTheme === "light" && <SunIcon className="w-6 h-6" />}
     </button>
   );
 };

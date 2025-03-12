@@ -14,7 +14,7 @@ function Footer() {
   });
   return (
     <footer className=" bg-container_lighter dark:bg-container_dark_lighter  ">
-      <div className="flex justify-between mx-10 border-t-2 dark:border-t-container py-8">
+      <div className="flex justify-between items-center mx-10 border-t-2 dark:border-t-container py-8">
         <p> &#174; Pavol Slovak</p>
         <div className="flex">
           {socialsStack.map((social, index) => (
@@ -34,19 +34,15 @@ function Footer() {
               {/* Mobile links */}
               <Link
                 href={social.src}
-                className="flex hover:underline  md:hidden ml-2"
+                className="btn-socials bg-black hover:border-black "
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {isMounted && (
                   <Image
-                    src={
-                      resolvedTheme === "light"
-                        ? social.iconBlack
-                        : social.iconWhite
-                    }
-                    width={30}
-                    height={30}
+                    src={social.iconWhite}
+                    width={24}
+                    height={24}
                     alt={social.text}
                   />
                 )}
